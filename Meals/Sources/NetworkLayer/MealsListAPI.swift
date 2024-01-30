@@ -9,7 +9,7 @@ import Foundation
 
 final class MealsListAPI {
     func fetchData(completion: @escaping (Result<MealResponse, NetworkError>) -> Void) {
-        guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else {
+        guard let url = URL(string: Constants.dessertEndpoint) else {
             completion(.failure(.invalidURL))
             return
         }

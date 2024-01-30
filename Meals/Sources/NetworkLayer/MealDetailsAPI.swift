@@ -9,7 +9,7 @@ import Foundation
 
 final class MealDetailsAPI {
     func fetchData(forMealID: String, completion: @escaping (Result<MealDetail, NetworkError>) -> Void) {
-        guard let url = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(forMealID)") else {
+        guard let url = URL(string: "\(Constants.mealEndpoint)\(forMealID)") else {
             completion(.failure(.invalidURL))
             return
         }

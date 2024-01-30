@@ -24,6 +24,8 @@
 		B53F5F852B68C1EB00CF337A /* MealsListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F5F842B68C1EB00CF337A /* MealsListAPI.swift */; };
 		B53F5F872B68C1FE00CF337A /* MealDetailsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F5F862B68C1FE00CF337A /* MealDetailsAPI.swift */; };
 		B53F5F892B68CA5900CF337A /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F5F882B68CA5900CF337A /* MealDetailViewModel.swift */; };
+		B53F5F8C2B693D7400CF337A /* MealConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F5F8B2B693D7400CF337A /* MealConstants.swift */; };
+		B53F5F8F2B69408000CF337A /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F5F8E2B69408000CF337A /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		B53F5F842B68C1EB00CF337A /* MealsListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListAPI.swift; sourceTree = "<group>"; };
 		B53F5F862B68C1FE00CF337A /* MealDetailsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsAPI.swift; sourceTree = "<group>"; };
 		B53F5F882B68CA5900CF337A /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
+		B53F5F8B2B693D7400CF337A /* MealConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealConstants.swift; sourceTree = "<group>"; };
+		B53F5F8E2B69408000CF337A /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,8 @@
 		B53F5F812B68C17D00CF337A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B53F5F8D2B69407200CF337A /* Extensions */,
+				B53F5F8A2B693D2F00CF337A /* Constants */,
 				B53F5F832B68C1D700CF337A /* NetworkLayer */,
 				B53F5F802B68C0D600CF337A /* Coordinator */,
 				B53F5F782B67227500CF337A /* View */,
@@ -229,6 +235,22 @@
 				B53F5F862B68C1FE00CF337A /* MealDetailsAPI.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		B53F5F8A2B693D2F00CF337A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B53F5F8B2B693D7400CF337A /* MealConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B53F5F8D2B69407200CF337A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B53F5F8E2B69408000CF337A /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53F5F8C2B693D7400CF337A /* MealConstants.swift in Sources */,
 				B53F5F872B68C1FE00CF337A /* MealDetailsAPI.swift in Sources */,
 				B53F5F732B6718E500CF337A /* NetworkManager.swift in Sources */,
 				B53F5F852B68C1EB00CF337A /* MealsListAPI.swift in Sources */,
@@ -368,6 +391,7 @@
 				B53F5F7C2B673EAA00CF337A /* MealDetailViewController.swift in Sources */,
 				B53F5F712B67187A00CF337A /* Meal.swift in Sources */,
 				B53F5F392B66E6DB00CF337A /* AppDelegate.swift in Sources */,
+				B53F5F8F2B69408000CF337A /* UIImageView+Extensions.swift in Sources */,
 				B53F5F3B2B66E6DB00CF337A /* SceneDelegate.swift in Sources */,
 				B53F5F6D2B67151500CF337A /* MealListCollectionViewController.swift in Sources */,
 				B53F5F772B67225900CF337A /* MealListViewModel.swift in Sources */,

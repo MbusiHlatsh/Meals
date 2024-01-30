@@ -17,7 +17,7 @@ class MealListCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Desserts"
+        title = Constants.mealViewTitle
         collectionView.register(MealCollectionViewCell.self, forCellWithReuseIdentifier: MealCollectionViewCell.reuseIdentifier)
         collectionView.collectionViewLayout = createLayout()
         viewModel?.eventPublisher
@@ -27,7 +27,7 @@ class MealListCollectionViewController: UICollectionViewController {
                     break
                 case .failure(let error):
                     self?.presentErrorAlert(
-                        title: "Sorry there was an issue",
+                        title: Constants.genericErrorMessage,
                         message: error.localizedDescription
                     )
                 }
@@ -49,7 +49,7 @@ class MealListCollectionViewController: UICollectionViewController {
         message: String
     ) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: Constants.genericErrorDismissMessage, style: .default, handler: nil)
         alert.addAction(okAction)
         
         present(alert, animated: true, completion: nil)

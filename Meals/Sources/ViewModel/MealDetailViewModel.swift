@@ -31,19 +31,19 @@ class MealDetailViewModel {
 
     func convertToMeals(from mealResponse: MealDetail) {
         let mealDetails = mealResponse.meals[0]
-        title = mealDetails["strMeal"] as? String ?? ""
+        title = mealDetails[Constants.mealDetailsTitleKey] as? String ?? ""
         var ingredientsList = ""
         for i in stride(from: 1, through: 20, by: 1) {
-            if let ingredient = mealDetails["strIngredient\(i)"] as? String,
+            if let ingredient = mealDetails["\(Constants.mealDetailsIngredientKey)\(i)"] as? String,
                ingredient.isEmpty == false {
-                let quantity = mealDetails["strMeasure\(i)"] as? String
+                let quantity = mealDetails["\(Constants.mealDetailsMeasurementKey)\(i)"] as? String
                 ingredientsList += "\(ingredient) \(quantity ?? "")\n"
             } else {
                 break
             }
         }
         ingredients = ingredientsList
-        if let mealInstructions = mealDetails["strInstructions"] as? String,
+        if let mealInstructions = mealDetails["\(Constants.mealDetailsInstructionsKey)"] as? String,
            mealInstructions.isEmpty == false {
             instructions = mealInstructions
         }
